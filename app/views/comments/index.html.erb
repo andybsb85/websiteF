@@ -1,0 +1,29 @@
+<h1><%= t('.list_comments')%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('.title')%></th>
+      <th><%= t('.description')%></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.title %></td>
+        <td><%= comment.description %></td>
+        <td><%= link_to t('.show'), comment %></td>
+        <td><%= link_to t('.edit'), edit_comment_path(comment) %></td>
+        <td><%= link_to t('.destroy'), comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('.new_comment'), new_comment_path %>

@@ -1,0 +1,53 @@
+<div class = "content">
+	<div class="center">
+		<% if user_signed_in? %>
+			<% current_user.email %>
+		<% end %>
+
+	 	<h1><%= t ('.welcome') %></h1>
+
+	 	<p><%= t ('.intro') %></p>
+
+
+		<div class= "orbit-container">
+		    <ul data-orbit data-options="animation_speed:1500;">
+		     </li>
+		   	 <li class="active">
+		    	<%= image_tag("pic3.jpg", alt: "slide2") %>
+		      <div class="orbit-caption">
+		       <%= t ('.caption1') %>
+		      </div>
+		   	 </li>
+		   	 <li>
+		     	<%= image_tag("pic4.jpg", alt: "slide3") %>
+		      <div class="orbit-caption">
+		        <%= t ('.caption2') %>
+		      </div>
+		   	 </li>
+		 	</ul>
+
+		 	 <!-- Navigation Arrows -->
+		 	<a href="#" class="orbit-prev">Prev <span></span></a>
+ 			<a href="#" class="orbit-next">Next <span></span></a>
+
+ 			<!-- Slide Numbers -->
+ 			<div class="orbit-slide-number">
+  			<span>1</span> of <span>2</span>
+ 			</div>
+
+ 			 <!-- Timer and Play/Pause Button -->
+  			<div class="orbit-timer">
+   			<span></span>
+   			 <div class="orbit-progress"></div>
+  			</div>
+		</div>
+    
+   		<ol class="orbit-bullets">
+  			<li data-orbit-slide-number="1"></li>
+  			<li data-orbit-slide-number="2" class="active"></li>
+		</ol>
+  
+		<%= link_to t('.survey'), '#', class: "button [radius round]" %>
+	 	<%= link_to t('.sign_up'), '#', class: "button [radius round]" %>
+	</div>
+</div> 

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @attraction.name %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @attraction.description %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @attraction.address %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @attraction.phone %>
+</p>
+
+<p>
+  <strong>Pagina Web:</strong>
+  <%= @attraction.website %>
+</p>
+
+<p>
+  <strong>Horario de Atencion:</strong>
+  <%= @attraction.openning_hours %>
+</p>
+
+<%= link_to 'Editar', edit_attraction_path(@attraction) %> |
+<%= link_to 'Atras', attractions_path %>

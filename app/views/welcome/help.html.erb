@@ -1,0 +1,10 @@
+<div class = "content">
+	<div class="center">
+		<% if user_signed_in? %>
+			<% current_user.email %>
+		<% end %>
+
+	  <h1><%= t ('.help_title') %></h1>
+
+	</div>
+</div> 
